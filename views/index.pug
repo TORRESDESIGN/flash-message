@@ -1,0 +1,14 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Flash Messages
+h1 Hello #{userName}
+form(action='/', method='POST')
+  label(for='userName') Name:
+  input(type='text', name='userName')
+  br
+  br
+  button(type='submit') Submit
+if userName
+  h1 #{success_messages} #{userName}
